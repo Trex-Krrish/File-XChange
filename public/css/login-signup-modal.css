@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  background-image: url(/images/filex-bg-01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+  height: 98vh;
+  width: 99vw;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .modal-content {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 60%;
+  color: #696969;
+  font-family: "Lato", sans-serif;
+}
+
+.main-container .modal-content::-webkit-scrollbar {
+  width: 0px;
+}
+
+.main-container .modal-content h3 {
+  font-size: 28px;
+  color: #4dc295;
+}
+
+.main-container .modal-content form {
+  position: relative;
+  margin-top: -2rem;
+}
+
+.main-container .modal-content form input {
+  height: 35px;
+  border-radius: 2px;
+  border: 2px solid #b4b4b4;
+  margin-top: 2rem;
+  color: #696969;
+}
+
+.main-container .modal-content form #username,
+.main-container .modal-content form #roll,
+.main-container .modal-content form #email {
+  width: 99%;
+}
+
+.main-container .modal-content form .input-flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .modal-content form .error {
+  color: #e74c3c;
+  font-size: 16px;
+}
+
+.main-container .modal-content form .names {
+  position: relative;
+  margin-top: unset;
+  padding-bottom: 1rem;
+}
+
+.main-container .modal-content form .names input {
+  width: 45%;
+}
+
+.main-container .modal-content form .names .name-error {
+  position: absolute;
+  bottom: -8px;
+  color: #e74c3c;
+  font-size: 16px;
+}
+
+.main-container .modal-content form .pass-input {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .modal-content form .pass-input input {
+  width: 99%;
+  position: relative;
+}
+
+.main-container .modal-content form .pass-input i {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  cursor: pointer;
+}
+
+.main-container .modal-content form .pass-input .pass-error {
+  position: absolute;
+  bottom: -1.1rem;
+}
+
+.main-container .modal-content form .btn {
+  margin-top: 1rem;
+  background-color: #4dc295;
+  border: 1px solid #4dc295;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.main-container .modal-content form .btn:hover {
+  background-color: transparent;
+  color: #4dc295;
+}
+
+.main-container .modal-content .other-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .modal-content .other-option a {
+  margin-left: 5px;
+  color: #4dc295;
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    height: 100%;
+  }
+  .main-container .modal-content {
+    width: 90%;
+    margin-top: 1rem;
+  }
+  .main-container .modal-content h3 {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=login-signup-modal.css.map */

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+.pagination-container {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination-container div {
+  margin: 0;
+}
+
+.pagination-container div ul {
+  margin: 5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination-container div ul li {
+  cursor: pointer;
+  list-style: none;
+  color: #696969;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.pagination-container div ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.pagination-container div ul li a {
+  color: #696969;
+  text-decoration: none;
+}
+
+.pagination-container .prev-btn ul li {
+  margin: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  background-color: #d4d4d4;
+}
+
+.pagination-container .page-nums ul li {
+  border-radius: 5px;
+  margin: 0.5rem;
+  padding: 1rem 1.2rem;
+  background-color: #d4d4d4;
+}
+
+.pagination-container .page-nums ul .active {
+  background-color: #4dc295;
+  color: white;
+}
+
+.pagination-container .page-nums ul .active a {
+  color: white;
+  text-decoration: none;
+}
+
+.pagination-container .page-nums ul .page-link {
+  text-decoration: none;
+}
+
+.pagination-container .next-btn ul a {
+  text-decoration: none;
+  color: white;
+}
+
+.pagination-container .next-btn ul a .next {
+  background-color: #4dc295;
+  margin: 0.5rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.pagination-container .next-btn ul a .next i {
+  color: white;
+}
+/*# sourceMappingURL=pagination.css.map */

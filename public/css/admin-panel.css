@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .side-bar {
+  height: 100%;
+  background-color: #4dc295;
+  position: fixed;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-container .side-bar .logo {
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.main-container .side-bar .page-links {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  height: 30%;
+}
+
+.main-container .side-bar .page-links ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container .side-bar .page-links ul li {
+  list-style: none;
+  font-size: 20px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main-container .side-bar .page-links ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main-container .side-bar .page-links ul li a {
+  font-family: "Lato", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.main-container .side-bar .logout-btn {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  margin-bottom: 2rem;
+  background-color: #e74c3c;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .side-bar .logout-btn:hover {
+  background-color: white;
+  color: #e74c3c;
+}
+
+.main-container .side-bar .logout-btn i {
+  margin-right: 1rem;
+}
+
+.main-container .main-section {
+  margin-left: 20%;
+  width: 80%;
+  height: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Lato", sans-serif;
+  color: #696969;
+}
+
+.main-container .main-section h1 {
+  font-size: 22px;
+  font-weight: 600;
+  width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.main-container .main-section .stats-card-container {
+  width: 100%;
+  height: 70%;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-container .main-section .stats-card-container .stats-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  width: 50%;
+  height: 100px;
+  border-radius: 5px;
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 26px 2px rgba(108, 108, 108, 0.16);
+          box-shadow: 0px 1px 26px 2px rgba(108, 108, 108, 0.16);
+  margin: 1rem;
+}
+
+.main-container .main-section .stats-card-container .stats-card i {
+  font-size: 50px;
+  color: #4dc295;
+}
+
+.main-container .main-section .stats-card-container .stats-card span {
+  margin-left: 2rem;
+}
+
+.main-container .main-section .stats-card-container .stats-card span h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.main-container .main-section .stats-card-container .stats-card span h3 {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #4dc295;
+}
+
+.main-container .main-section .user-details-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container .main-section .user-details-container .top-tools {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 32px;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar input {
+  width: 280px;
+  border: 2px solid #a1a1a1;
+  padding-left: 10px;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar input:focus {
+  outline: none;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar input::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar input:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar input::-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar input::placeholder {
+  color: #9b9b9b;
+}
+
+.main-container .main-section .user-details-container .top-tools .search-bar button {
+  background-color: #4dc295;
+  color: white;
+  border: 0;
+  width: 50px;
+  cursor: pointer;
+}
+
+.main-container .main-section .user-details-container .top-tools .other-tools select {
+  margin-left: 1rem;
+  cursor: pointer;
+  height: 35px;
+  border: 2px solid #a1a1a1;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.main-container .main-section .user-details-container .top-tools .other-tools select:focus {
+  outline: none;
+}
+
+.main-container .main-section .user-details-container .top-tools .other-tools select option {
+  border: 0;
+  border-radius: 0;
+}
+
+.main-container .main-section .user-details-container .table-container {
+  height: 80%;
+  border-radius: 10px;
+  overflow-y: scroll;
+  margin-top: 1rem;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+          box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+}
+
+.main-container .main-section .user-details-container .table-container table,
+.main-container .main-section .user-details-container .table-container th,
+.main-container .main-section .user-details-container .table-container td {
+  text-align: center;
+}
+
+.main-container .main-section .user-details-container .table-container table {
+  width: 100%;
+  padding: 1rem;
+}
+
+.main-container .main-section .user-details-container .table-container table tr {
+  margin-top: 1rem;
+  height: 30px;
+}
+
+.main-container .main-section .user-details-container .table-container table tr .user-img {
+  height: 40px;
+  border-radius: 50px;
+}
+
+.main-container .main-section .user-details-container .table-container table tr th {
+  color: #3a3a3a;
+  background-color: lightgray;
+  font-weight: 500;
+  height: 50px;
+}
+
+.main-container .main-section .user-details-container .table-container table tr th i {
+  font-size: 20px;
+}
+
+.main-container .main-section .user-details-container .table-container table tr td {
+  height: 40px;
+}
+
+.main-container .main-section .user-details-container .table-container table tr td .delete-btn {
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #e74c3c;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.main-container .main-section .user-details-container .table-container table tr td .view-btn {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #4dc295;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.main-container .main-section .user-details-container .table-container table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+/*# sourceMappingURL=admin-panel.css.map */

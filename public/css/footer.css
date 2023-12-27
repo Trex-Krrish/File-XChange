@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+footer {
+  font-family: "Lato", sans-serif;
+  background-color: #4dc295;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer ul {
+  list-style: none;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer ul a  {
+  text-decoration: none;
+}
+footer ul a li {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 10px;
+}
+
+footer ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+footer hr {
+  border: 1px solid white;
+  width: 95%;
+}
+
+footer .footer-logo {
+  margin: 2rem;
+  width: 30%;
+}
+
+footer .footer-logo img {
+  width: 100%;
+}
+
+footer p {
+  color: white;
+}
+
+@media (max-width: 550px) {
+  footer {
+    height: auto;
+  }
+  footer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding-left: unset;
+  }
+  footer .footer-logo {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

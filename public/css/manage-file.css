@@ -1,0 +1,823 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #c5c5c5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1e202e;
+}
+
+.file-name {
+  position: absolute;
+  font-family: "Lato", sans-serif;
+  color: #696969;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.edit-modal-container {
+  background-image: url(/images/filex-bg-01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Lato", sans-serif;
+  color: #696969;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-modal-container .edit-modal {
+  width: 80%;
+  height: auto;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 3px solid lightgray;
+}
+
+.edit-modal-container .edit-modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-modal-container .edit-modal form .file-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.edit-modal-container .edit-modal form .file-details span {
+  width: 100%;
+}
+
+.edit-modal-container .edit-modal form .file-details span label,
+.edit-modal-container .edit-modal form .file-details span input {
+  display: block;
+}
+
+.edit-modal-container .edit-modal form .file-details span label {
+  margin-top: 1rem;
+}
+
+.edit-modal-container .edit-modal form .file-details span input {
+  height: 35px;
+  border-radius: 2px;
+  border: 2px solid #b4b4b4;
+  margin-top: 2rem;
+  color: #696969;
+  margin-top: unset;
+  height: 30px;
+  width: 90%;
+}
+
+.edit-modal-container .edit-modal form .file-details span .required::after {
+  content: "*";
+  color: #e74c3c;
+  font-size: 18px;
+}
+
+.edit-modal-container .edit-modal form .file-details span .desc-input {
+  height: 50px;
+  vertical-align: top;
+  width: 90%;
+  resize: none;
+  font-family: "Lato", sans-serif;
+  color: #696969;
+}
+
+.edit-modal-container .edit-modal form .file-details .sem-subj {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.edit-modal-container .edit-modal form .file-details .sem-subj label,
+.edit-modal-container .edit-modal form .file-details .sem-subj input {
+  display: unset;
+}
+
+.edit-modal-container .edit-modal form .file-details .sem-subj .semesters {
+  height: 35px;
+  border-radius: 2px;
+  border: 2px solid #b4b4b4;
+  margin-top: 2rem;
+  color: #696969;
+  margin-top: unset;
+  height: 35px;
+  width: 90%;
+}
+
+.edit-modal-container .edit-modal form .file-details .sem-subj input {
+  width: 80%;
+}
+
+.edit-modal-container .edit-modal form .file-actions {
+  margin-top: 1rem;
+  margin: 0 0 1rem 0;
+  width: 50%;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-modal-container .edit-modal form .file-actions button {
+  justify-self: flex-start;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.edit-modal-container .edit-modal form .file-actions .cancel-edit-btn {
+  background-color: transparent;
+  border: 1px solid #696969;
+  color: #696969;
+  width: 30%;
+}
+
+.edit-modal-container .edit-modal form .file-actions .cancel-edit-btn:hover {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.edit-modal-container .edit-modal form .file-actions .save-btn {
+  background-color: #4dc295;
+  font-family: "Lato", sans-serif;
+  color: white;
+  border: 1px solid #4dc295;
+  margin-right: 2rem;
+  width: 50%;
+}
+
+.edit-modal-container .edit-modal form .file-actions .save-btn:hover {
+  background-color: transparent;
+  color: #4dc295;
+}
+
+.main-container {
+  font-family: "Lato", sans-serif;
+  color: #696969;
+}
+
+.main-container .upload-sec {
+  margin-top: 2rem;
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .upload-sec .upload-box {
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+          box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+  border-radius: 10px;
+  width: 60%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main-container .upload-sec .upload-box i {
+  font-size: 80px;
+  color: #4dc295;
+}
+
+.main-container .upload-sec .upload-box .text-n-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .upload-sec .upload-box .text-n-btn h3 {
+  font-size: 22px;
+}
+
+.main-container .upload-sec .upload-box .text-n-btn button {
+  margin-top: 1rem;
+  width: 60%;
+  height: 40px;
+  border: 0;
+  border-radius: 2px;
+  background-color: #4dc295;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .upload-sec .upload-box .text-n-btn button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.main-container .upload-sec .upload-modal-container {
+  font-family: "Lato", sans-serif;
+  color: #696969;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(39, 39, 39, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal {
+  height: 80%;
+  width: 70%;
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 2px 35px rgba(65, 65, 65, 0.5);
+          box-shadow: 0px 2px 35px rgba(65, 65, 65, 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 1rem;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .drop-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 190px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #8b8b8b;
+  color: #444;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .drop-container:hover,
+.main-container .upload-sec .upload-modal-container .upload-modal form .drop-container .drop-container.drag-active {
+  background: #eee;
+  border-color: #111;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .drop-container p {
+  color: #696969;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .drop-container:hover .drop-title,
+.main-container .upload-sec .upload-modal-container .upload-modal form .drop-container.drag-active .drop-title {
+  color: #4dc295;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .drop-title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form input[type="file"] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #696969;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: 1px solid #4dc295;
+  background-color: #4dc295;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form input[type="file"]::file-selector-button:hover {
+  color: #4dc295;
+  background-color: transparent;
+  border: 1px solid #4dc295;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details span {
+  width: 100%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details span label,
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details span input {
+  display: block;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details span label {
+  margin-top: 1rem;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details span input {
+  height: 35px;
+  border-radius: 2px;
+  border: 2px solid #b4b4b4;
+  margin-top: 2rem;
+  color: #696969;
+  margin-top: unset;
+  height: 30px;
+  width: 90%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details span .required::after {
+  content: "*";
+  color: #e74c3c;
+  font-size: 18px;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details span .desc-input {
+  height: 50px;
+  vertical-align: top;
+  width: 90%;
+  resize: none;
+  font-family: "Lato", sans-serif;
+  color: #696969;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details .sem-subj {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details .sem-subj label,
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details .sem-subj input {
+  display: unset;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details .sem-subj .semesters {
+  height: 35px;
+  border-radius: 2px;
+  border: 2px solid #b4b4b4;
+  margin-top: 2rem;
+  color: #696969;
+  margin-top: unset;
+  height: 35px;
+  width: 90%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-details .sem-subj input {
+  width: 80%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-actions {
+  margin-top: 1rem;
+  margin: 0 0 1rem 0;
+  width: 50%;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-actions button {
+  justify-self: flex-start;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-actions .cancel-btn {
+  background-color: transparent;
+  border: 1px solid #696969;
+  color: #696969;
+  width: 30%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-actions .cancel-btn:hover {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-actions .upload-btn {
+  background-color: #4dc295;
+  font-family: "Lato", sans-serif;
+  color: white;
+  border: 1px solid #4dc295;
+  margin-right: 2rem;
+  width: 50%;
+}
+
+.main-container .upload-sec .upload-modal-container .upload-modal form .file-actions .upload-btn:hover {
+  background-color: transparent;
+  color: #4dc295;
+}
+
+.main-container hr {
+  margin: 2rem;
+}
+
+.main-container .recent-sec {
+  margin-top: 1rem;
+}
+
+.main-container .recent-sec h1 {
+  margin: 2rem;
+}
+
+.main-container .recent-sec .cards-container {
+  margin: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.main-container .recent-sec .cards-container .card {
+  position: relative;
+  margin: 0 auto;
+  width: 330px;
+  height: 270px;
+  padding: 1rem;
+  border: 0;
+  background-color: white;
+  -webkit-box-shadow: var(--box-sahdow);
+          box-shadow: var(--box-sahdow);
+  border-radius: 5px;
+  cursor: pointer;
+  height: auto;
+  cursor: unset;
+}
+
+.main-container .recent-sec .cards-container .card .file-thumbnail-container {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container .recent-sec .cards-container .card .file-thumbnail-container .file-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-container .recent-sec .cards-container .card .card-details {
+  width: 95%;
+  color: var(--text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .recent-sec .cards-container .card .card-details .uploader-img-container {
+  border-radius: 50%;
+  height: 40px;
+  width: 50px;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+
+.main-container .recent-sec .cards-container .card .card-details .uploader-img-container .uploader-img {
+  height: 100%;
+  width: 100%;
+}
+
+.main-container .recent-sec .cards-container .card .card-details .title-desc .card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main-container .recent-sec .cards-container .card .card-details .title-desc .card-description {
+  font-size: 14px;
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info {
+  color: var(--text-color);
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info .more-actions {
+  position: relative;
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info .more-actions i {
+  cursor: pointer;
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info .more-actions ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  -webkit-box-shadow: var(--box-sahdow);
+          box-shadow: var(--box-sahdow);
+  border-radius: 5px;
+  padding: 1rem;
+  width: 150px;
+  top: 0;
+  right: 0;
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info .more-actions ul li {
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+  cursor: pointer;
+  list-style: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info .more-actions ul li:hover {
+  color: var(--primary-color);
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info .more-actions ul li i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.main-container .recent-sec .cards-container .card .card-other-info .more-actions ul li:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.main-container .recent-sec .cards-container .card .card-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .recent-sec .cards-container .card .card-actions button {
+  cursor: pointer;
+  background-color: #4dc295;
+  color: white;
+  padding: 8px 20px;
+  border: 1px solid #4dc295;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .recent-sec .cards-container .card .card-actions button:hover {
+  background-color: transparent;
+  color: #4dc295;
+}
+
+.main-container .recent-sec .cards-container .card .card-actions button:nth-child(2) {
+  margin-left: 0.5rem;
+  background-color: transparent;
+  color: #696969;
+  border: 1px solid #696969;
+}
+
+.main-container .recent-sec .cards-container .card .card-actions button:nth-child(2):hover {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.main-container .recent-sec .cards-container .card .card-actions .post-date {
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+  font-size: 12px;
+  color: #696969;
+}
+
+@media (max-width: 1000px) {
+  .edit-modal-container .edit-modal form .file-actions {
+    width: 100%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .edit-modal-container .edit-modal {
+    width: 90%;
+  }
+  .edit-modal-container .edit-modal form .drop-container {
+    width: 90%;
+  }
+  .edit-modal-container .edit-modal form .file-details {
+    width: 90%;
+  }
+  .edit-modal-container .edit-modal form .file-details span {
+    width: 98%;
+  }
+  .edit-modal-container .edit-modal form .file-details span input {
+    width: 100%;
+  }
+  .edit-modal-container .edit-modal form .file-details span .desc-input {
+    width: 100%;
+  }
+  .edit-modal-container .edit-modal form .file-details .sem-subj {
+    width: 108%;
+  }
+  .edit-modal-container .edit-modal form .file-details .sem-subj .semesters input {
+    width: 100%;
+  }
+  .edit-modal-container .edit-modal form .file-actions {
+    width: 98%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-container .upload-sec .upload-box {
+    width: 90%;
+    height: 180px;
+  }
+  .main-container .upload-sec .upload-box i {
+    font-size: 60px;
+  }
+  .main-container .upload-sec .upload-box .text-n-btn h3 {
+    font-size: 20px;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal {
+    width: 90%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .drop-container {
+    width: 90%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-details {
+    width: 90%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-details span {
+    width: 98%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-details span input {
+    width: 100%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-details span .desc-input {
+    width: 100%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-details .sem-subj {
+    width: 108%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-details .sem-subj .semesters input {
+    width: 100%;
+  }
+  .main-container .upload-sec .upload-modal-container .upload-modal form .file-actions {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-container .recent-sec .cards-container {
+    -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .main-container .recent-sec .cards-container .card {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=manage-file.css.map */

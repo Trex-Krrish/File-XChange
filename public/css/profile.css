@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #c5c5c5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1e202e;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.main-container {
+  font-family: "Lato", sans-serif;
+  color: #696969;
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-container .profile-edit {
+  width: 60%;
+}
+
+.main-container .profile-edit h2 {
+  font-size: 22px;
+}
+
+.main-container .profile-edit .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 90%;
+  margin-left: 1rem;
+}
+
+.main-container .profile-edit .profile .error {
+  position: absolute;
+  right: 20%;
+}
+
+.main-container .profile-edit .profile .pfp-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 100%;
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+}
+
+.main-container .profile-edit .profile .pfp-container .pfp {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-container .profile-edit .profile i {
+  position: absolute;
+  bottom: 1rem;
+  margin-left: 4rem;
+  background-color: #4dc295;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.main-container .profile-edit .pfp-actions-container {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  font-family: "Lato", sans-serif;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+          box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+  height: 30%;
+  width: 40%;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions i {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions .choose-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions input[type="file"] {
+  width: 300px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #696969;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: 1px solid #4dc295;
+  background-color: #4dc295;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions input[type="file"]::file-selector-button:hover {
+  color: #4dc295;
+  background-color: transparent;
+  border: 1px solid #4dc295;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions button {
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  border: none;
+  margin: 1rem 0;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions .upload-btn {
+  background-color: #4dc295;
+  margin: 0;
+  color: white;
+  border-radius: 5px;
+  height: 45px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions .choose-btn {
+  background-color: #4dc295;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions .choose-btn:hover {
+  background-color: transparent;
+  color: #4dc295;
+  border: 1px solid #4dc295;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions .dlt-btn {
+  color: #696969;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .profile-edit .pfp-actions-container .pfp-actions .dlt-btn:hover {
+  color: #e74c3c;
+  background-color: transparent;
+  border: 1px solid #e74c3c;
+}
+
+.main-container .profile-edit .other-fields {
+  margin-top: 2rem;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Lato", sans-serif;
+}
+
+.main-container .profile-edit .other-fields label,
+.main-container .profile-edit .other-fields input {
+  display: block;
+}
+
+.main-container .profile-edit .other-fields label {
+  margin-top: 1rem;
+}
+
+.main-container .profile-edit .other-fields input {
+  border: 1px solid #696969;
+  color: #292929;
+  padding: 8px 14px 8px 14px;
+}
+
+.main-container .profile-edit .other-fields .disabled {
+  color: #696969;
+}
+
+.main-container .profile-edit .other-fields .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 104%;
+}
+
+.main-container .profile-edit .other-fields .name span {
+  width: 40%;
+}
+
+.main-container .profile-edit .other-fields .name span input {
+  width: 90%;
+}
+
+.main-container .profile-edit .other-fields .enroll input, .main-container .profile-edit .other-fields .email input {
+  width: 100%;
+}
+
+.main-container .profile-edit .other-fields .field-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 104%;
+}
+
+.main-container .profile-edit .other-fields .field-flex span {
+  width: 70%;
+}
+
+.main-container .profile-edit .other-fields .field-flex span input {
+  width: 100%;
+}
+
+.main-container .profile-edit .other-fields .field-flex button {
+  background-color: #4dc295;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  height: 35px;
+  border: 1px solid #4dc295;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .profile-edit .other-fields .field-flex button:hover {
+  background-color: white;
+  color: #4dc295;
+}
+
+.main-container .profile-edit .other-fields h2 {
+  font-size: 22px;
+}
+
+.main-container .profile-edit .other-fields .pass-form {
+  width: 50%;
+}
+
+.main-container .profile-edit .other-fields .pass-form span label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .profile-edit .other-fields .pass-form span label .asterisk {
+  color: #e74c3c;
+}
+
+.main-container .profile-edit .other-fields .pass-form span input {
+  width: 100%;
+}
+
+.main-container .profile-edit .other-fields .pass-form span .required::after {
+  content: "*";
+  color: #e74c3c;
+  font-size: 18px;
+}
+
+.main-container .profile-edit .other-fields .pass-form .pass-actions {
+  width: 80%;
+  margin-top: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-container .profile-edit .other-fields .pass-form .pass-actions button {
+  width: 45%;
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .profile-edit .other-fields .pass-form .pass-actions .cancel-pass-btn {
+  background-color: transparent;
+  border: 1px solid #696969;
+  color: #696969;
+}
+
+.main-container .profile-edit .other-fields .pass-form .pass-actions .cancel-pass-btn:hover {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.main-container .profile-edit .other-fields .pass-form .pass-actions .save-pass-btn {
+  background-color: #4dc295;
+  font-family: "Lato", sans-serif;
+  color: white;
+  border: 1px solid #4dc295;
+}
+
+.main-container .profile-edit .other-fields .pass-form .pass-actions .save-pass-btn:hover {
+  background-color: transparent;
+  color: #4dc295;
+}
+
+.main-container .profile-preview {
+  width: 30%;
+}
+
+.main-container .profile-preview h2 {
+  font-size: 22px;
+}
+
+.main-container .profile-preview .profile-card {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+          box-shadow: 0px 2px 35px rgba(145, 145, 145, 0.7);
+}
+
+.main-container .profile-preview .profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background-color: #4dc295;
+}
+
+.main-container .profile-preview .profile-card .pfp-container {
+  margin-top: 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  border: 5px solid white;
+}
+
+.main-container .profile-preview .profile-card .pfp-container .pfp {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-container .profile-preview .profile-card .about {
+  width: 100%;
+  font-size: 16px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.main-container .profile-preview .profile-card h3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-container .profile-edit {
+    width: 90%;
+  }
+  .main-container .profile-preview {
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-container .profile-edit {
+    width: 90%;
+  }
+  .main-container .profile-edit .other-fields .pass-form {
+    width: 100%;
+  }
+  .main-container .profile-edit .pfp-actions-container .pfp-actions {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-container .profile-edit .other-fields .field-flex {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .main-container .profile-edit .other-fields .field-flex span {
+    width: 100%;
+  }
+  .main-container .profile-edit .other-fields .field-flex button {
+    margin-top: 0.5rem;
+  }
+  .main-container .profile-preview {
+    margin-top: 2rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    margin: 0;
+  }
+  .main-container .profile-edit .profile .pfp-container {
+    height: 100px;
+    width: 100px;
+  }
+  .main-container .profile-edit .profile i {
+    margin-left: 3rem;
+  }
+  .main-container .profile-edit .other-fields .pass-form .pass-actions {
+    width: 100%;
+  }
+  .main-container .profile-preview {
+    margin-bottom: 2rem;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

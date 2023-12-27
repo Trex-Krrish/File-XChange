@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-container {
+  font-family: "Lato", sans-serif;
+  margin: 1rem;
+}
+.main-container h1 {
+  color: #696969;
+  font-size: 24px;
+  text-align: center;
+}
+.main-container .team-members {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main-container .team-members .member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .team-members .member .img-container {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.main-container .team-members .member .img-container img {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main-container .team-members .member .name {
+  color: #696969;
+}
+.main-container hr {
+  margin-top: 2rem;
+}
+.main-container .more-about .member-more {
+  color: #696969;
+  margin: 2rem;
+  margin-top: 3rem;
+}
+.main-container .more-about .member-more .member-details {
+  display: flex;
+  align-items: center;
+}
+.main-container .more-about .member-more .member-details .img-container {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.main-container .more-about .member-more .member-details .img-container img {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main-container .more-about .member-more .member-details .other-info {
+  margin-left: 2rem;
+}
+.main-container .more-about .member-more .member-details .other-info .name {
+  color: #242424;
+}
+.main-container .more-about .member-more .member-details .other-info .socials a {
+  margin-right: 1rem;
+  color: #1e202e;
+  transition: 0.3s;
+}
+.main-container .more-about .member-more .member-details .other-info .socials a:hover {
+  color: #4dc295;
+}
+
+@media (max-width: 700px) {
+  .main-container .team-members {
+    flex-direction: column;
+  }
+  .main-container .team-members .member .img-container {
+    height: 150px;
+    width: 150px;
+  }
+}/*# sourceMappingURL=about.css.map */
